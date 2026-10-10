@@ -592,8 +592,24 @@ fin_missions_3 = {
 		required_missions = { fin_independence }
 		position = 3
 		provinces_to_highlight = { 
-			area = karelia_area 
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			OR = {
+				AND = {
+					area = karelia_area
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { ROOT = { has_country_flag = rus_can_complete_missions_as_subject } }
+				}
+				AND = {
+					province_id = 30
+					OR = {
+						AND = {
+							NOT = { owned_by = ROOT }
+							NOT = { ROOT = { has_country_flag = rus_can_complete_missions_as_subject } }
+						}
+						NOT = { has_fort_building_trigger = yes }
+						NOT = { base_manpower = 8 }
+					}
+				}
+			}
 		}
 		trigger = {
 			if = {

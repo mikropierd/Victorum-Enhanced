@@ -1018,7 +1018,7 @@ country_event = {
                     has_province_modifier = nile_estuary_modifier
                 }
                 remove_province_modifier = nile_estuary_modifier
-                add_province_modifier = {
+				add_permanent_province_modifier = {
                     name = expanded_nile_estuary_modifier
                     duration = -1
                 }
@@ -1039,7 +1039,7 @@ country_event = {
                     has_province_modifier = granary_of_the_mediterranean
                 }
                 remove_province_modifier = granary_of_the_mediterranean
-                add_province_modifier = {
+				add_permanent_province_modifier = {
                     name = expanded_granary_of_the_mediterranean_modifier
                     duration = -1
                 }
@@ -1669,7 +1669,7 @@ country_event = { #Construction Commences in [4316.GetName]
         name = flavor_mam.115.a
 
         hidden_effect = {
-            add_treasury = 20000
+			add_treasury = 100000
         }
         4316 = {
             add_great_project = {
@@ -1679,7 +1679,7 @@ country_event = { #Construction Commences in [4316.GetName]
             }
         }
         hidden_effect = {
-            add_treasury = -20000
+			add_treasury = -100000
         }
     }
     after = {

@@ -603,7 +603,7 @@ oyo_ogboni_missions_slot = {
 		}
 		effect = {
 			capital_scope = {
-				add_building = temple
+				add_or_upgrade_tax_building = yes
 			}
 			if = {
 				limit = {

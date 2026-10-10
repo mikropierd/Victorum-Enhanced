@@ -1414,6 +1414,7 @@ MEE_BYZ_defense_5 = {
 				third_limit = "
 					OR = {
 						151 = { has_province_modifier = BYZ_theodosian_wall_2 } #should't be possible without ownership anyway.
+						151 = { has_province_modifier = BYZ_theodosian_wall_3 } #should't be possible without ownership anyway.
 						4701 = { has_province_modifier = BYZ_hexamilion_wall_2 }
 					}
 				"

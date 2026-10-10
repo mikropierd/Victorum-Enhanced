@@ -326,7 +326,7 @@ country_event = {
 		set_capital = 1213
 		1213 = {
 			rename_capital = "Debre Berhan"
-			add_building = temple
+			add_or_upgrade_tax_building = yes
 		}
 		every_owned_province = {
 			limit = {
@@ -545,7 +545,7 @@ country_event = {
 				add_casus_belli = {
 					target = MAM
 					type = cb_insult
-					months = 1825
+					months = 120
 				}
 			}
 		}

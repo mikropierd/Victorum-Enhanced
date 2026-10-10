@@ -18,10 +18,15 @@ lit_dlc_1 = {
 		icon = catholic_confraternity 
 		required_missions = { lit_stabilize_interior } 
 		position = 2 
-		trigger = { 
-			estate_loyalty = {
-				estate = estate_church
-				loyalty = 60 
+		trigger = {
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
 			}
 			num_of_owned_provinces_with = {
 				has_tax_building_trigger = yes 

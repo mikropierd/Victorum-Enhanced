@@ -210,7 +210,7 @@ country_event = {
 			limit = {
 				owns = 2075 # Punjab
 				2075 = {
-					NOT = { has_building = temple }
+					has_tax_building_trigger = no
 					num_free_building_slots = 1
 				}
 			}
@@ -221,12 +221,13 @@ country_event = {
 		else_if = {
 			limit = {
 				any_owned_province = {
-					NOT = { has_building = temple }
+					has_tax_building_trigger = no
+					num_free_building_slots = 1
 				}
 			}
 			random_owned_province = {
 				limit = {
-					NOT = { has_building = temple }
+					has_tax_building_trigger = no
 					num_free_building_slots = 1
 				}
 				add_building = temple

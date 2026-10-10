@@ -36,7 +36,13 @@ WoC_Mongols_1 = {
 			NOT = { was_moghulistan_nation = yes }
 		}
 		else = {
-			tag = YUA
+			OR = {
+				tag = YUA
+				AND = {
+					tag = MGE
+					was_tag = YUA
+				}
+			}
 		}
 		has_dlc = "Winds of Change"
 	}
@@ -258,7 +264,13 @@ WoC_Mongols_2 = {
 			NOT = { was_moghulistan_nation = yes }
 		}
 		else = {
-			tag = YUA
+			OR = {
+				tag = YUA
+				AND = {
+					tag = MGE
+					was_tag = YUA
+				}
+			}
 		}
 		has_dlc = "Winds of Change"
 	}
@@ -692,7 +704,13 @@ WoC_Mongols_3 = {
 			NOT = { was_moghulistan_nation = yes }
 		}
 		else = {
-			tag = YUA
+			OR = {
+				tag = YUA
+				AND = {
+					tag = MGE
+					was_tag = YUA
+				}
+			}
 		}
 		has_dlc = "Winds of Change"
 	}
@@ -999,7 +1017,13 @@ WoC_Mongols_4 = {
 			NOT = { was_moghulistan_nation = yes }
 		}
 		else = {
-			tag = YUA
+			OR = {
+				tag = YUA
+				AND = {
+					tag = MGE
+					was_tag = YUA
+				}
+			}
 		}
 		has_dlc = "Winds of Change"
 	}
@@ -1330,7 +1354,13 @@ WoC_Mongols_5 = {
 			NOT = { was_moghulistan_nation = yes }
 		}
 		else = {
-			tag = YUA
+			OR = {
+				tag = YUA
+				AND = {
+					tag = MGE
+					was_tag = YUA
+				}
+			}
 		}
 		has_dlc = "Winds of Change"
 	}

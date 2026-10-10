@@ -19,13 +19,20 @@ iroquoians_1 = {
 		required_missions = {	}
 		provinces_to_highlight = {
 			owned_by = ROOT
+			OR = {
+				AND = {
+					has_courthouse_building_trigger = no
+					NOT = { has_building = native_longhouse }
+				}
+				local_autonomy = 30
+			}
 		}
 		position = 1
 		
 		trigger = {
 			all_owned_province = {
 				OR = {
-					has_building = courthouse
+					has_courthouse_building_trigger = yes
 					has_building = native_longhouse
 				}
 				NOT = { local_autonomy = 30 }
@@ -194,7 +201,9 @@ iroquoians_1 = {
 		icon = mission_impaled_soldies
 		required_missions = { iroquois_first_confederacy }
 		provinces_to_highlight = {
-			continent = north_america
+			region_for_scope_province = {
+				is_capital_of = ROOT
+			}
 			owned_by = FRA
 		}
 		position = 4
@@ -248,7 +257,7 @@ iroquoians_2 = {
 		required_missions = {	}
 		provinces_to_highlight = {
 			owned_by = ROOT
-			NOT = { unrest = 2 }
+			unrest = 2
 		}
 		position = 1
 		
@@ -277,16 +286,20 @@ iroquoians_2 = {
 		required_missions = { iroquois_the_three_sisters }
 		provinces_to_highlight = {
 			owned_by = ROOT
-			trade_goods = grain
-			NOT = { has_building = workshop }
-			NOT = { has_building = native_storehouse }
+			OR = {
+				trade_goods = grain
+				AND = {
+					has_production_building_trigger = no
+					NOT = { has_building = native_storehouse }
+				}
+			}
 		}
 		position = 2
 		
 		trigger = {
 			all_owned_province = {
 				OR = {
-					has_building = workshop
+					has_production_building_trigger = yes
 					has_building = native_storehouse
 				}
 			}
@@ -313,6 +326,12 @@ iroquoians_2 = {
 				province_id = 961
 				province_id = 964
 				province_id = 968
+			}
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
 			}
 		}
 		trigger = {

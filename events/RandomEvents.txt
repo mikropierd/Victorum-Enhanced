@@ -7256,6 +7256,12 @@ country_event = {
                 any_neighbor_province = {
                     owned_by = ROOT
                 }
+				OR = {
+					is_capital = no
+					owner = {
+						NOT = { num_of_cities = 2 }
+					}
+				}
             }
         }
     }

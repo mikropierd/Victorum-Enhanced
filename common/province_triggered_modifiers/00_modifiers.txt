@@ -1270,6 +1270,8 @@ mng_hanlin_academy_modifier = {
 	potential = {
 		OR = {
 			owner = { mission_completed = mng_examination_system }
+			owner = { mission_completed = mng_examination_system2 }
+			owner = { mission_completed = mng_examination_system3 }
 			owner = { mission_completed = yua_examination_system }
 		}
 	}

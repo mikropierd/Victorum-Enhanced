@@ -3740,6 +3740,7 @@ estate_nobles_expedition_rights = {
 estate_nobles_highland_fortifications = {
 	icon = privilege_fort
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
@@ -3809,6 +3810,7 @@ estate_nobles_emirs_of_baghdad = {
 	icon = privilege_build_jain_temple
 	land_share = 0
 	max_absolutism = -15
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 3 } }
 	loyalty = 0.1
 	influence = 0.1
 	is_valid = {
@@ -4214,6 +4216,7 @@ estate_nobles_GER_diploma_andreanum = {
 	loyalty = 0.1
 	influence = 0.05
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {
 		has_country_flag = GER_unlock_diploma_andreanum_flag
 	}
@@ -4264,6 +4267,7 @@ estate_nobles_orangist_privileges = {
 estate_nobles_vegvar_system = {
 	icon = estate_nobles_vegvar_system
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.1
 	influence = 0.05
 	is_valid = {
@@ -4569,6 +4573,7 @@ estate_nobles_AZT_warrior_culture = {
 estate_nobles_reformatio_sigismundi = {
 	icon = privilege_coup_detat
 	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	influence = 0.15
 	loyalty = 0.10
 	is_valid = {
@@ -5034,6 +5039,7 @@ estate_nobles_MUG_development_of_the_subah = {
 	icon = privilege_states
 	influence = 0.05
 	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0
 	is_valid = {
 		has_country_flag = MUG_unlock_privilege_subahs_flag

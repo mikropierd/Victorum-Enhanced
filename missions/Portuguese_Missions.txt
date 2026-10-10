@@ -520,7 +520,7 @@ por_east_african_ambitions = {
 					has_discovered = ROOT
 				}
 				2030 = {
-					has_discovered = POR
+					has_discovered = ROOT
 				}
 			}
 		}
@@ -721,7 +721,7 @@ por_indonesia_trade_dominance = {
 		
 		trigger = { 
 			1361 = {		# Straits of Johor
-				is_strongest_trade_power = POR
+				is_strongest_trade_power = ROOT
 			}
 		}
 	

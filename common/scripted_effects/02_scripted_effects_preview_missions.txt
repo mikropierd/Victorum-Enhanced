@@ -1890,6 +1890,10 @@ update_mission_previews = {
             clear_mismatching_mission_keys_for_batch = { batch = 1 }
             clear_mismatching_mission_keys_for_batch = { batch = 2 }
             clear_mismatching_mission_keys_for_batch = { batch = 3 }
+			set_variable = {
+				which = can_preview_missions_var
+				value = 0
+			}
         }
     }
 }

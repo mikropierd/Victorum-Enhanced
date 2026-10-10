@@ -97,12 +97,12 @@ monarch_names = {
 	"Qorihillpay #0" = -1
 	"Chimbo #0" = -1
 	"Michay #0" = -1
-	"Chiklla  #0" = -1
-	"Runu  #0" = -1
-	"Ocllo  #0" = -1
-	"Sisa  #0" = -1
-	"Cusirimay  #0" = -1
-	"Huipa  #0" = -1
+	"Chiklla #0" = -1
+	"Runu #0" = -1
+	"Ocllo #0" = -1
+	"Sisa #0" = -1
+	"Cusirimay #0" = -1
+	"Huipa #0" = -1
 }
 
 ship_names = {

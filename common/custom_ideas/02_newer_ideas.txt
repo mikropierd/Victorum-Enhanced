@@ -355,6 +355,9 @@ newer_idea_mil_modifiers = {
 	}
 	custom_monthly_militarized_society = {
 		monthly_militarized_society = 0.05
+		monthly_prussian_militarized_society_1 = 0.05
+		monthly_prussian_militarized_society_2 = 0.05
+		monthly_prussian_militarized_society_3 = 0.05
 		level_cost_2 = 5
 		level_cost_3 = 15		
 		level_cost_4 = 30

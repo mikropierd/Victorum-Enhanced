@@ -54,8 +54,8 @@ monarch_names = {
 	"Rangita #0" = -10
 	"Rafohy #0" = -5
 	"Rasoherina #0" = -5
-	"Ranavalona  #0" = -5
-	"Randapavola  #0" = -1
+	"Ranavalona #0" = -5
+	"Randapavola #0" = -1
 }
 
 leader_names = {

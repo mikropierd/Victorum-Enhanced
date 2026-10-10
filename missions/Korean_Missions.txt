@@ -1392,8 +1392,10 @@ korea_economic_social_political_path_1 = {
 			OR = {
 				NOT = { owned_by = root }
 				NOT = { is_core = root }
-				NOT = { culture = korean }
-				NOT = { culture = korean_new }
+				AND = {
+					NOT = { culture = korean }
+					NOT = { culture = korean_new }
+				}
 				NOT = { development = 8 }
 				has_manufactory_trigger = no
 			}
@@ -2580,7 +2582,7 @@ korean_missions_eoc_4 = {
 		}
 		
 		effect = {
-			custom_tooltip = mng_pearly_estuary_upgraded_tt
+			custom_tooltip = yua_pearly_estuary_upgraded_tt
 			hidden_effect = {
 				667 = {
 					remove_province_modifier = pearl_estuary_modifier
@@ -2589,13 +2591,13 @@ korean_missions_eoc_4 = {
 						duration = -1 
 					}
 				}
-				if = { 
-					limit = { has_dlc = "Leviathan" }
-					custom_tooltip = mng_10_loyalty_for_burghers_on_expand_infr_tt
-					set_country_flag = mng_10_loyalty_for_burghers_on_expand_infr_flag
-				}
-				else = { add_adm_power = 100 }
 			}
+			if = {
+				limit = { has_dlc = "Leviathan" }
+				custom_tooltip = mng_10_loyalty_for_burghers_on_expand_infr_tt
+				set_country_flag = mng_10_loyalty_for_burghers_on_expand_infr_flag
+			}
+			else = { add_adm_power = 100 }
 		}
 	}
 	
@@ -2964,10 +2966,25 @@ korean_missions_eoc_5 = {
 		position = 11
 		provinces_to_highlight = { 
 			owned_by = ROOT 
-			AND = {
-				has_port = yes 
-				has_coast_defense_building_trigger = no 
-				NOT = { development = 20 }
+			has_port = yes
+			if = {
+				limit = {
+					ROOT = {
+						num_of_owned_provinces_with = {
+							has_coast_defense_building_trigger = yes
+							development = 20
+							value = 8
+						}
+					}
+				}
+				devastation = 1
+			}
+			else = {
+				OR = {
+					has_coast_defense_building_trigger = no
+					NOT = { development = 20 }
+					devastation = 1
+				}
 			}
 		} 
 		
@@ -2975,9 +2992,9 @@ korean_missions_eoc_5 = {
 			if = {
 				limit = { has_dlc = "Mandate of Heaven" } 
 				NOT = { 
-					num_of_owned_provinces_with = {
+					any_owned_province = {
+						has_port = yes
 						devastation = 1 
-						value = 1 
 					}
 				}
 			}
@@ -3001,23 +3018,19 @@ korean_missions_eoc_5 = {
 		effect = {
 			custom_tooltip = mng_improve_haijin_policy_reward_tt
 			tooltip = {
-				if = {
-					limit = { has_dlc = "Mandate of Heaven" }
-					add_prosperity = 100 
-					add_mandate = 5 
+				add_province_modifier = {
+					name = mng_safe_coasts_modifier
+					duration = 9125
 				}
 				if = {
 					limit = { has_dlc = "Mandate of Heaven" }
+					add_prosperity = 100
 					add_mandate = 5 
 				}
 				else = { 
 					add_base_production = 1 
 					owner = { add_prestige_or_monarch_power = { amount = 35 } } 
 				} 
-				add_province_modifier = {
-					name = mng_safe_coasts_modifier
-					duration = 9125 
-				}
 			}
 			
 			custom_tooltip = mng_repeal_and_replace_reward_policy_tt

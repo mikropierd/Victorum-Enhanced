@@ -865,6 +865,7 @@ fifth_monarchists_reform = {
     nation_designer_cost = 100
     nation_designer_trigger = {
         has_dlc = "Domination"
+		religion_group = christian
     }
     valid_for_nation_designer = yes
     modifiers = {

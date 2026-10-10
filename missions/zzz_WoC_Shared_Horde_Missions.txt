@@ -401,6 +401,7 @@ woc_hordes_1_devout = {
 					religion = tengri_pagan_reformed
 				}
 				custom_tooltip = TENGRI_REMOVE_PRESTIGE_PENALTY_FROM_SWITCHING_SECONDARY_RELIGION
+				set_country_flag = hordes_devout_tengri_completion_flag
 				
 				custom_tooltip = SEPERATOR_TOOLTIP
 				

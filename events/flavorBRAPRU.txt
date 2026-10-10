@@ -21,14 +21,23 @@ country_event = {
 
     trigger = {
         tag = BRA
-        government = monarchy
+		valid_for_personal_unions_trigger = yes
+		is_at_war = no
         PRU = {
             government = monarchy
             ai = yes
             was_player = no
             NOT = { num_of_subjects = 1 }
             has_opinion = { who = BRA value = 100 }
-            NOT = { vassal_of = BRA }
+			is_at_war = no
+			religion_group = christian
+			OR = {
+				is_free_or_tributary_trigger = yes
+				AND = {
+					is_vassal = yes
+					NOT = { vassal_of = BRA }
+				}
+			}
         }
     }
 

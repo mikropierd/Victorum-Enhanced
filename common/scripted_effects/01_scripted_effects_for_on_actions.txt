@@ -3956,6 +3956,24 @@ on_alliance_broken_effect = {
             remove_country_modifier = mam_ven_cooperation_modifier
         }
     }
+	if = {
+		limit = {
+			has_country_modifier = geo_rus_alliance
+			NOT = { alliance_with = MOS }
+			NOT = { alliance_with = RUS }
+		}
+		remove_country_modifier = geo_rus_alliance
+	}
+	FROM = {
+		if = {
+			limit = {
+				has_country_modifier = geo_rus_alliance
+				NOT = { alliance_with = MOS }
+				NOT = { alliance_with = RUS }
+			}
+			remove_country_modifier = geo_rus_alliance
+		}
+	}
 }
 
 on_adm_development_effect = {
@@ -5191,13 +5209,14 @@ on_defender_of_faith_claim_effect = {
     }
 }
 
-on_advisor_removed_effct_adm = {}
+on_advisor_removed_effct_adm = {
+	remove_country_modifier = zoroastrian_prophet_in_the_court
+}
 on_advisor_removed_effct_dip = {}
 on_advisor_removed_effct_mil = {}
 on_advisor_removed_effct = {
     on_advisor_removed_effct_$type$ = yes
     remove_grand_vizier_modifiers = yes
-    remove_country_modifier = zoroastrian_prophet_in_the_court
 }
 
 

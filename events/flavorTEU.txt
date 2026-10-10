@@ -2223,7 +2223,7 @@ country_event = {
         295 = {
             add_base_tax = 3
             change_religion = ROOT
-            if = { limit = { NOT = { has_building = temple } } add_building = temple }
+			if = { limit = { NOT = { has_tax_building_trigger = yes } } add_building = temple }
             spawn_rebels = {
                 type = orthodox_rebels
                 size = 1
