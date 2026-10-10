@@ -1,11 +1,5 @@
 #BRA - Brandenburg
 government = monarchy
-if = {
-	limit = {
-		NOT = { has_dlc = "Domination" }
-	}
-	add_government_reform = feudalism_reform
-}
 add_government_reform = margrave_of_brandenburg
 government_rank = 7 #Prince_Elector
 elector = yes

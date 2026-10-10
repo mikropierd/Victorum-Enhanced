@@ -1,11 +1,5 @@
 #BAD - Baden
 government = monarchy
-if = {
-	limit = {
-		NOT = { has_dlc = "Domination" }
-	}
-	add_government_reform = feudalism_reform
-}
 add_government_reform = unlocked_eue_marquisate_reform
 government_rank = 5 #Margraviate
 primary_culture = swabian

@@ -1,11 +1,5 @@
 #MFA - Montferrat
 government = monarchy
-if = {
-	limit = {
-		NOT = { has_dlc = "Domination" }
-	}
-	add_government_reform = feudalism_reform
-}
 add_government_reform = palaiologos_montferrat_reform
 government_rank = 6 #Duchy
 primary_culture = piedmontese
