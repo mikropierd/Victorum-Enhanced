@@ -5051,9 +5051,17 @@ province_event = {
 	
 	option = { #exploit the pilgrims
 		name = colonial_nation.191.a
+		trigger = {
+			OR = {
+				has_tax_building_trigger = no
+				owner = {
+					has_estate = estate_church
+				}
+			}
+		}
 		if = {
 			limit = {
-				NOT = { has_building = temple }
+				has_tax_building_trigger = no
 			}
 			add_building = temple
 		}
@@ -5083,11 +5091,24 @@ province_event = {
 		name = colonial_nation.191.c
 		owner = {
 			add_adm_power = 50
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = -5
-			}
 		}
-		add_unrest = 1
+
+		if = {
+			limit = {
+				owner = {
+					has_estate = estate_church
+				}
+			}
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = -5
+				}
+			}
+			add_unrest = 1
+		} else = {
+			# extra unrest if we cant make the clergy unhappy
+			add_unrest = 3
+		}
 	}
 }

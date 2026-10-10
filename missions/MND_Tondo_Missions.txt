@@ -212,9 +212,23 @@ tdo_1 = {
 		provinces_to_highlight = {	}
 		
 		trigger = {
-			estate_loyalty = { 
-				estate = estate_brahmins
-				loyalty = 55
+			if = {
+				limit = {
+					has_estate = estate_brahmins
+				}
+				estate_loyalty = {
+					estate = estate_brahmins
+					loyalty = 55
+				}
+			}
+			else_if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 55
+				}
 			}
 			calc_true_if = {
 				all_owned_province = {

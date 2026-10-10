@@ -1315,13 +1315,18 @@ dan_norway_holstein_mission_slot = {
 					value = 100
 				}
 			}
-			estate_loyalty = {
-				estate = estate_church
-				loyalty = 60
-			}
-			estate_influence = {
-				estate = estate_church
-				influence = 50
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+				estate_influence = {
+					estate = estate_church
+					influence = 50
+				}
 			}
 		}
 		effect = {

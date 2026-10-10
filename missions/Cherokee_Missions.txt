@@ -158,6 +158,7 @@ cherokee_2 = {
 			owned_by = ROOT
 			NOT = { has_building = native_great_trail }
 			NOT = { has_building = workshop }
+			NOT = { has_building = counting_house }
 		}
 		
 		trigger = {

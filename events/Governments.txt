@@ -10,7 +10,17 @@ country_event = {
 	trigger = {
 		government = monarchy
 		has_parliament = no
-		reform_level = 5
+		OR = {
+			AND = {
+				is_revolutionary = no
+				reform_level = 6
+			}
+			AND = {
+				is_revolutionary = yes
+				has_dlc = "Emperor"
+				reform_level = 10
+			}
+		}
 		NOT = { has_reform = parliamentary_reform }
 		NOT = { has_reform = constitutional_monarchy }
 		NOT = { has_reform = celestial_empire }
@@ -35,7 +45,24 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB9479"
-		add_government_reform = parliamentary_reform
+		if = {
+			limit = {
+				is_revolutionary = yes
+			}
+			add_government_reform = revolutionary_council_reform
+		}
+		else_if = {
+			limit = {
+				OR = {
+					tag = BYZ
+					was_tag = BYZ
+				}
+			 }
+			add_government_reform = restoration_of_the_senate_reform
+		}
+		else = {
+			add_government_reform = parliamentary_reform
+		}
 		add_stability_or_adm_power = yes
 	}
 }

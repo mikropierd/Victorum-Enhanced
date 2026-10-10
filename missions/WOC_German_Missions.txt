@@ -536,6 +536,7 @@ JHC_GER_2 = {
 						limit = {
 							NOT = { is_core = ROOT }
 							NOT = { is_permanent_claim = ROOT }
+							is_sea = no
 						}
 						add_permanent_claim = ROOT
 					}
@@ -545,6 +546,7 @@ JHC_GER_2 = {
 						limit = {
 							NOT = { is_core = ROOT }
 							NOT = { is_permanent_claim = ROOT }
+							is_sea = no
 						}
 						add_permanent_claim = ROOT
 					}
@@ -554,6 +556,7 @@ JHC_GER_2 = {
 						limit = {
 							NOT = { is_core = ROOT }
 							NOT = { is_permanent_claim = ROOT }
+							is_sea = no
 						}
 						add_permanent_claim = ROOT
 					}

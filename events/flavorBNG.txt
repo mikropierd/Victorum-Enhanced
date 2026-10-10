@@ -444,7 +444,7 @@ country_event = {
 			add_casus_belli = {
 				target = BNG
 				type = cb_vassalize_mission
-				months = 1825
+				months = 60
 			}
 		}
 	}
@@ -465,7 +465,7 @@ country_event = {
 			add_casus_belli = {
 				target = BNG
 				type = cb_vassalize_mission
-				months = 1825
+				months = 60
 			}
 		}
 	}

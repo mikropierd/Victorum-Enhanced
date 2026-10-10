@@ -842,15 +842,43 @@ tau_slot_4 = {
 				has_tax_building_trigger = yes
 				value = 15
 			}
-			estate_influence = {
-				estate = estate_church
-				influence = 40
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_influence = {
+					estate = estate_church
+					influence = 40
+				}
+			}
+			else_if = {
+				limit = {
+					has_estate = estate_brahmins
+				}
+				estate_influence = {
+					estate = estate_brahmins
+					influence = 40
+				}
 			}
 		}
 		effect = {
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = 20
+			if = {
+					limit = {
+						has_estate = estate_church
+					}
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 20
+					}
+			}
+			else_if = {
+					limit = {
+						has_estate = estate_brahmins
+					}
+					add_estate_loyalty = {
+						estate = estate_brahmins
+						loyalty = 20
+					}
 			}
 			if = {
 				limit = {

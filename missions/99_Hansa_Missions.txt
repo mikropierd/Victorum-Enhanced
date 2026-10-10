@@ -557,22 +557,14 @@ lubeck_missions_2 = {
 		position = 6 
 		provinces_to_highlight = {
 			province_id = 45 
-			NOT = {
-				OR = {
-					has_building = marketplace 
-					has_building = trade_depot
-					has_building = stock_exchange
-				}
-				num_of_times_improved = 4 
+			OR = {
+				has_trade_building_trigger = no
+				NOT = { num_of_times_improved = 4 }
 			}
 		}
 		trigger = {
 			45 = {
-				OR = {
-					has_building = marketplace 
-					has_building = trade_depot
-					has_building = stock_exchange
-				}
+				has_trade_building_trigger = yes
 				num_of_times_improved = 4 
 			}
 		}
@@ -2205,8 +2197,18 @@ lubeck_missions_5 = {
 				tooltip = hsa_largest_fleet_from_rivals_or_naval_ideas_tt
 				OR = {
 					any_country = {
-						is_rival = ROOT
+						OR = {
+							is_rival = ROOT
+							is_enemy = ROOT
+						}
 						NOT = { navy_size = ROOT }
+					}
+					NOT = {
+						any_known_country = {
+							NOT = { tag = ROOT }
+							NOT = { is_subject_of = ROOT }
+							navy_size = ROOT
+						}
 					}
 					full_idea_group = naval_ideas
 				}

@@ -6992,12 +6992,12 @@ aju_gold_trade_deal_ajuuraan = {
 aju_gold_trade_deal_ally = {
 	inflation_reduction = 0.05
 	global_prosperity_growth = 0.1
-	trade_goods_size_modifier = 0.05
+	global_trade_goods_size_modifier = 0.05
 }
 
 #Country modifier
 aju_gold_trade_deal_refused = {
-	trade_goods_size_modifier = 0.2
+	global_trade_goods_size_modifier = 0.2
 }
 
 #Province modifier
@@ -7323,8 +7323,8 @@ gen_hoa_great_power_modifier = {
 }
 
 gen_hoa_unify_horn_modifier = {
-	local_monthly_devastation = -0.1
-	local_unrest = -2
+	global_monthly_devastation = -0.1
+	global_unrest = -2
 	development_cost = -0.05
 }
 
@@ -13659,7 +13659,7 @@ boh_pearl_of_the_baltics = {
 
 boh_reformatio_sigismundi_hre = {
 	imperial_authority = 0.1
-	manpower_against_imperial_enemies = 0.2
+	manpower_against_imperial_enemies = 20000
 }
 
 boh_cultural_integration = {

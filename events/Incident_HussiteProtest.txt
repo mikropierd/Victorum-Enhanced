@@ -71,8 +71,8 @@ country_event = {
 						religion = hussite
 					}
 					OR = {
-						total_own_and_non_tributary_subject_development = root
-						army_size = root
+						total_own_and_non_tributary_subject_development = emperor
+						army_size = emperor
 					}
 				}
 			}
@@ -86,8 +86,8 @@ country_event = {
 							religion = hussite
 						}
 						OR = {
-							total_own_and_non_tributary_subject_development = root
-							army_size = root
+							total_own_and_non_tributary_subject_development = emperor
+							army_size = emperor
 						}
 					}
 				}
@@ -95,19 +95,19 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					NOT = { num_of_cities = 2 }
+					emperor = { NOT = { num_of_cities = 2 } }
 					any_country = {
 						is_part_of_hre = yes
 						religion = hussite
 						OR = {
 							is_in_war = {
 								attacker_leader = this
-								defenders = root
+								defenders = emperor
 								war_score = 50
 							}
 							is_in_war = {
 								defender_leader = this
-								attackers = root
+								attackers = emperor
 								war_score = 50
 							}
 						}
@@ -133,8 +133,8 @@ country_event = {
 							religion = hussite
 						}
 						OR = {
-							total_own_and_non_tributary_subject_development = root
-							army_size = root
+							total_own_and_non_tributary_subject_development = emperor
+							army_size = emperor
 						}
 					}
 				}
@@ -142,19 +142,19 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					NOT = { num_of_cities = 2 }
+					emperor = { NOT = { num_of_cities = 2 } }
 					any_country = {
 						is_part_of_hre = yes
 						religion = hussite
 						OR = {
 							is_in_war = {
 								attacker_leader = this
-								defenders = root
+								defenders = emperor
 								war_score = 50
 							}
 							is_in_war = {
 								defender_leader = this
-								attackers = root
+								attackers = emperor
 								war_score = 50
 							}
 						}
@@ -182,12 +182,12 @@ country_event = {
 							OR = {
 								is_in_war = {
 									attacker_leader = this
-									defenders = root
+									defenders = emperor
 									war_score = 50
 								}
 								is_in_war = {
 									defender_leader = this
-									attackers = root
+									attackers = emperor
 									war_score = 50
 								}
 							}

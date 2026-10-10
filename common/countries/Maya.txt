@@ -86,7 +86,7 @@ monarch_names = {
 	
 	"Sacnite #0" = -1
 	"Namox Chel #0" = -1
-	"Itzel  #0" = -1
+	"Itzel #0" = -1
 }
 
 ship_names = {

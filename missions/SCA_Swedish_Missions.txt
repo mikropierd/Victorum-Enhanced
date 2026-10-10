@@ -36,6 +36,7 @@ swe_scandinavian_colonialism_mission_slot = {
 						OR = {
 							template = merc__local_free_city_company
 							template = merc__local_small_company
+							template = merc__local_free_company
 						}
 					}
 				}

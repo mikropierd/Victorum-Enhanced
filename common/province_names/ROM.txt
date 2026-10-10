@@ -322,7 +322,6 @@
 64 = "Landishuta"
 65 = "Monacum"
 68 = "Cassiliacum"
-69 = "Suebia" #Technically Swabia, not Upper Swabia
 70 = "Virtembergia"
 71 = "Onoldum"
 72 = "Brisgoviae"

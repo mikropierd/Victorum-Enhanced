@@ -31,7 +31,10 @@ fijian_missions = {
 		trigger = { 
 			OR = {
 				AND = {
-					shipyard = 1
+					OR = {
+						shipyard = 1
+						grand_shipyard = 1
+					}
 					num_of_light_ship = 5
 				}
 				num_of_light_ship = 15

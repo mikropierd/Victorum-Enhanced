@@ -45,6 +45,12 @@ country_event = {
 						area = astrakhan_area
 					}
 					add_core = KLM
+					if = {
+						limit = {
+							is_territorial_core = ROOT
+						}
+						set_province_flag = territorial_core_before_klm_spawn
+					}
 				}
 				release = KLM
 				KLM = {
@@ -100,6 +106,23 @@ country_event = {
 				}
 			}
 		}
+		hidden_effect = {
+			# restore territorial cores which were lost when releasing KLM, so that the reconquest CB is useful
+			astrakhan_area = {
+				limit = {
+					has_province_flag = territorial_core_before_klm_spawn
+				}
+				add_territorial_core = ROOT
+			}
+			# make sure that 2417 definitely has a territorial core, because otherwise the reconquest war won't happen
+			if = {
+				limit = {
+					NOT = { is_core = 2417 }
+					NOT = { is_territorial_core = 2417 }
+				}
+				add_territorial_core = 2417
+			}
+		}
 		declare_war_with_cb = {
 			who = KLM
 			casus_belli = cb_core
@@ -118,6 +141,14 @@ country_event = {
 				type = anti_tax_rebels
 				size = 2
 			}
+		}
+	}
+	after = {
+		astrakhan_area = {
+			limit = {
+				has_province_flag = territorial_core_before_klm_spawn
+			}
+			clr_province_flag = territorial_core_before_klm_spawn
 		}
 	}
 }

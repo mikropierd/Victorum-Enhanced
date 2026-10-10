@@ -3785,6 +3785,13 @@ country_event = {
 			limit = { NOT = { government = monarchy } }
 			change_government = monarchy
 		}
+		# unlock both reforms so that the player can use the other one when changing government types
+		unlock_government_reform = {
+			government_reform = russian_empire_reform
+		}
+		unlock_government_reform = {
+			government_reform = great_russian_republic_reform
+		}
 		add_government_reform = russian_empire_reform
 		ai_chance = { 
 			factor = 1 
@@ -3796,6 +3803,13 @@ country_event = {
 		name = flavor_rus.200.b
 		trigger = {
 			government = republic
+		}
+		# unlock both reforms so that the player can use the other one when changing government types
+		unlock_government_reform = {
+			government_reform = russian_empire_reform
+		}
+		unlock_government_reform = {
+			government_reform = great_russian_republic_reform
 		}
 		add_government_reform = great_russian_republic_reform
 		ai_chance = { 

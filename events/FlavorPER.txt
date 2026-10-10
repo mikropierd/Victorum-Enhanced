@@ -3668,6 +3668,7 @@ country_event = {
             tag = ERS
         }
         religion_group = zoroastrian_group
+		is_at_war = no
         NOT = { has_country_flag = has_eranshahr_moment }
     }
     immediate = {

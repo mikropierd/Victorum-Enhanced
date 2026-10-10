@@ -5748,7 +5748,7 @@ poland_sca_slot_5_plc_3 = {
 			hidden_effect = {
 				38 = { 
 					remove_province_modifier = daugava_estuary_modifier
-					add_province_modifier = {
+					add_permanent_province_modifier = {
 						name = pol_daugava_estuary_modifier
 						duration = -1 
 					}

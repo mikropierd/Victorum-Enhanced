@@ -583,15 +583,24 @@ chinese_kingdoms_1 = {
 						value = 90
 					}
 					is_emperor_of_china = yes
+				NOT = {
+						any_country = {
+								is_emperor_of_china = yes
+						}
+				}
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = chi_strongest_warlord_tt
-				any_country = { 
-					capital_scope = { superregion = china_superregion }
-					NOT = { army_size = ROOT } 
-					NOT = { total_development = ROOT }
-				}	
+				NOT = {
+					any_country = {
+						capital_scope = { superregion = china_superregion }
+						OR = {
+							army_size = ROOT
+							total_development = ROOT
+						}
+					}
+				}
 			}
 		}
 		effect = {	
@@ -5191,7 +5200,7 @@ ming_missions_4_b = {
 		}
 		
 		effect = {
-			custom_tooltip = mng_pearly_estuary_upgraded_tt
+			custom_tooltip = yua_pearly_estuary_upgraded_tt
 			hidden_effect = {
 				667 = {
 					remove_province_modifier = pearl_estuary_modifier
@@ -5200,13 +5209,13 @@ ming_missions_4_b = {
 						duration = -1 
 					}
 				}
-				if = { 
-					limit = { has_dlc = "Leviathan" }
-					custom_tooltip = mng_10_loyalty_for_burghers_on_expand_infr_tt
-					set_country_flag = mng_10_loyalty_for_burghers_on_expand_infr_flag
-				}
-				else = { add_adm_power = 100 }
 			}
+			if = {
+				limit = { has_dlc = "Leviathan" }
+				custom_tooltip = mng_10_loyalty_for_burghers_on_expand_infr_tt
+				set_country_flag = mng_10_loyalty_for_burghers_on_expand_infr_flag
+			}
+			else = { add_adm_power = 100 }
 		}
 	}
 	
@@ -6534,10 +6543,24 @@ ming_missions_5_b = {
 		provinces_to_highlight = { 
 			owned_by = ROOT 
 			has_port = yes 
-			OR = {
-				has_coast_defense_building_trigger = no 
-				NOT = { development = 20 }
-				devastation = 1 
+			if = {
+				limit = {
+					ROOT = {
+						num_of_owned_provinces_with = {
+							has_coast_defense_building_trigger = yes
+							development = 20
+							value = 8
+						}
+					}
+				}
+				devastation = 1
+			}
+			else = {
+				OR = {
+					has_coast_defense_building_trigger = no
+					NOT = { development = 20 }
+					devastation = 1
+				}
 			}
 		} 
 		
@@ -6587,8 +6610,12 @@ ming_missions_5_b = {
 				if = {
 					limit = { has_dlc = "Mandate of Heaven" }
 					add_prosperity = 100 
+					add_mandate = 10
 				}
-				else = { add_base_production = 1 } 
+				else = {
+					add_base_production = 1
+					add_prestige_or_monarch_power = { amount = 25 }
+				}
 			}
 			
 			custom_tooltip = mng_repeal_and_replace_reward_policy_tt

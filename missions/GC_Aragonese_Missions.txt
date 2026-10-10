@@ -27,7 +27,12 @@ gc_aragon_1 = {
 			}
 		}
 		NOT = { map_setup = map_setup_random }
-		NOT = { has_dlc = "Domination" }
+		OR = {
+			NOT = { has_dlc = "Domination" }
+			# CAT and VAL don't have new missions from Domination
+			tag = CAT
+			tag = VAL
+		}
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
@@ -228,7 +233,12 @@ gc_aragon_2 = {
 			}
 		}
 		NOT = { map_setup = map_setup_random }
-		NOT = { has_dlc = "Domination" }
+		OR = {
+			NOT = { has_dlc = "Domination" }
+			# CAT and VAL don't have new missions from Domination
+			tag = CAT
+			tag = VAL
+		}
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
@@ -509,7 +519,12 @@ gc_aragon_3 = {
 			}
 		}
 		NOT = { map_setup = map_setup_random }
-		NOT = { has_dlc = "Domination" }
+		OR = {
+			NOT = { has_dlc = "Domination" }
+			# CAT and VAL don't have new missions from Domination
+			tag = CAT
+			tag = VAL
+		}
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
@@ -841,7 +856,12 @@ gc_aragon_4 = {
 			}
 		}
 		NOT = { map_setup = map_setup_random }
-		NOT = { has_dlc = "Domination" }
+		OR = {
+			NOT = { has_dlc = "Domination" }
+			# CAT and VAL don't have new missions from Domination
+			tag = CAT
+			tag = VAL
+		}
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes
@@ -1179,7 +1199,12 @@ gc_aragon_5 = {
 			}
 		}
 		NOT = { map_setup = map_setup_random }
-		NOT = { has_dlc = "Domination" }
+		OR = {
+			NOT = { has_dlc = "Domination" }
+			# CAT and VAL don't have new missions from Domination
+			tag = CAT
+			tag = VAL
+		}
 		has_country_flag = use_paradox_missions
 	}
 	has_country_shield = yes

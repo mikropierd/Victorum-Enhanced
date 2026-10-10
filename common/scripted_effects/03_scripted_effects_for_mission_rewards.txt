@@ -735,6 +735,16 @@ ARB_flavor_event_6_effect = {
     }
 
     custom_tooltip = ARB_permanent_claims_on_all_muslim_provinces
+	hidden_effect = {
+		every_province = {
+			limit = {
+				religion_group = muslim
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+	}
 
     custom_tooltip = " "
 

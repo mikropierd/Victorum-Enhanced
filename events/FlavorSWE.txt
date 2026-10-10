@@ -3358,7 +3358,7 @@ country_event = {
 			limit = {
 				religion = orthodox
 			}
-			add_patriarch_authority = 20
+			add_patriarch_authority = 0.2
 			add_years_of_income = 0.25
 		}
 		else = {
@@ -3457,7 +3457,7 @@ country_event = {
 			limit = {
 				religion = orthodox
 			}
-			add_patriarch_authority = 20
+			add_patriarch_authority = 0.2
 			add_years_of_income = 0.25
 		}
 		else = {

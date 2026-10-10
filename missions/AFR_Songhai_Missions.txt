@@ -139,7 +139,10 @@ songhai_military_slot = {
 		position = 5
 		trigger = {
 			army_tradition = 75
-			army_professionalism = 0.8
+			if = {
+				limit = { has_dlc = "Cradle of Civilization" }
+				army_professionalism = 0.8
+			}
 			custom_trigger_tooltip = {
 				tooltip = son_modernize_army_tt
 				NOT = {

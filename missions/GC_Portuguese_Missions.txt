@@ -230,6 +230,27 @@ gc_por_1 = {
 			}
 		}
 	}
+}
+
+gc_por_1_b = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential_on_load = {
+		OR = {
+			has_dlc = "Domination"
+			has_dlc = "Golden Century"
+		}
+	}
+	potential = {
+		OR = {
+			has_dlc = "Domination"
+			has_dlc = "Golden Century"
+		}
+		tag = POR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
 
    gc_por_ceylon = {
 		icon = mission_portuguese_ceylon
@@ -615,7 +636,28 @@ gc_por_2_b = {
 			}
 		}
 	}
-	
+}
+
+gc_por_2_c = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		OR = {
+			has_dlc = "Domination"
+			has_dlc = "Golden Century"
+		}
+	}
+	potential = {
+		OR = {
+			has_dlc = "Domination"
+			has_dlc = "Golden Century"
+		}
+		tag = POR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+
 	gc_por_malabar = {
 		icon = mission_portuguese_malabar
 		required_missions = { gc_portugal_discovers_india }
@@ -681,7 +723,7 @@ gc_por_2_b = {
 			}
 		}
 	}
-	
+
 	gc_por_surat = {
 		icon = mission_control_surat
 		required_missions = { gc_por_malabar }
@@ -735,29 +777,7 @@ gc_por_2_b = {
 			}
 		}
 	}
-}
 
-gc_por_2_c = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential_on_load = {
-		OR = {
-			has_dlc = "Domination" 
-			has_dlc = "Golden Century"
-		}
-	}
-	potential = {
-		OR = {
-			has_dlc = "Domination" 
-			has_dlc = "Golden Century"
-		}
-		tag = POR
-		NOT = { map_setup = map_setup_random }
-		is_random_new_world = no
-	}
-	has_country_shield = yes
-	
 	gc_por_build_the_navy = {
 		icon = mission_sea_battles
 		required_missions = {}
@@ -1313,7 +1333,7 @@ gc_por_4 = {
 					has_discovered = ROOT
 				}
 				2030 = {
-					has_discovered = POR
+					has_discovered = ROOT
 				}
 			}
 		}
@@ -1998,7 +2018,7 @@ gc_por_5_continued = {
 		
 		trigger = { 
 			1361 = {
-				is_strongest_trade_power = POR
+				is_strongest_trade_power = ROOT
 			}
 		}
 	
